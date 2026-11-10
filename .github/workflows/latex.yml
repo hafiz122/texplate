@@ -1,0 +1,22 @@
+name: Compile LaTeX templates
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        template: [statistics-report, problem-set, assignment]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-recommended texlive-latex-extra
+      - name: Compile sample
+        working-directory: templates/${{ matrix.template }}
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build main.tex

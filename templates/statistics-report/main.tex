@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\input{macros.tex}
+
+\title{\ReportTitle}
+\author{\StudentName \\ \CourseName \\ \InstitutionName}
+\date{\SubmissionDate}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+State the research question, data source, method, and main finding in a few sentences. The values in this sample are synthetic and demonstrate formatting only.
+\end{abstract}
+
+\section{Introduction}
+Describe the question you are investigating and why it matters. Define the outcome and the groups or variables you will compare.
+
+\section{Data and methods}
+Describe where your real data came from, how observations were selected, and any cleaning or exclusions. Name the summary statistics or model you use. For example, the sample mean is
+\begin{equation}
+  \SampleMean{x} = \frac{1}{n}\sum_{i=1}^{n} x_i.
+  \label{eq:mean}
+\end{equation}
+For a random variable $X$, use $\Expect{X}$ and $\Variance{X}$ when reporting population quantities. Explain why your chosen method addresses the research question and state any relevant assumptions.
+
+\section{Results}
+Table~\ref{tab:summary} shows an illustrative layout. Every number in the table is synthetic; replace the caption, labels, and values with your results.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Synthetic descriptive statistics for two example groups}
+  \label{tab:summary}
+  \begin{tabular}{lrrr}
+    \toprule
+    Group & Sample size & Mean & Standard deviation \\
+    \midrule
+    A & 10 & 12.4 & 2.1 \\
+    B & 10 & 15.1 & 2.4 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Figure~\ref{fig:placeholder} marks where a plot can go. Replace the box with an image using \verb|\includegraphics| and give the plot an informative caption.
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\parbox[c][1.5in][c]{0.7\textwidth}{\centering Replace this box with a plot of your results.}}
+  \caption{Placeholder for a figure; no data are plotted here}
+  \label{fig:placeholder}
+\end{figure}
+
+\section{Discussion}
+Interpret your results in context. Address uncertainty, assumptions, limitations, and whether the data support the question posed in the introduction. Do not infer a real-world effect from the synthetic example values.
+
+\section{Conclusion}
+Summarize the answer to your research question and identify a useful next step.
+
+\section*{References}
+[Add the sources you actually used in the format required by your course.]
+
+\end{document}

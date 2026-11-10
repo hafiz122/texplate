@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\input{macros.tex}
+
+\title{\ProblemSetTitle}
+\author{\StudentName \\ \CourseName \\ \InstitutionName}
+\date{Due: \DueDate}
+
+\begin{document}
+\maketitle
+
+% Replace these examples with your assigned questions.
+\problem{Summary statistics}
+For the illustrative data set $2, 4, 6, 8$, find the sample mean and sample variance.
+
+\begin{solution}
+The mean is
+\begin{equation*}
+  \SampleMean{x} = \frac{2+4+6+8}{4} = 5.
+\end{equation*}
+The squared deviations sum to $(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2=20$. Dividing by $n-1=3$ gives the sample variance
+\begin{equation*}
+  s^2 = \frac{20}{3}.
+\end{equation*}
+\end{solution}
+
+\problem{A probability calculation}
+A fair six-sided die is rolled once. What is the probability of rolling at least five?
+
+\begin{solution}
+The favorable outcomes are $5$ and $6$, so
+\begin{equation*}
+  \Prob{X \geq 5} = \frac{2}{6} = \frac{1}{3}.
+\end{equation*}
+\end{solution}
+
+\end{document}
